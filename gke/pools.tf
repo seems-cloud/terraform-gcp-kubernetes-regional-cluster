@@ -4,7 +4,7 @@ resource "google_container_node_pool" "a-pool" {
   location = var.gke_a_pool_region
   node_locations = var.gke_a_pool_zones
 
-  cluster = google_container_cluster.gke.name
+  cluster = google_container_cluster.cluster.name
 
   initial_node_count = var.gke_a_pool_init_nodes
 
@@ -14,6 +14,7 @@ resource "google_container_node_pool" "a-pool" {
   }
 
   node_config {
+    preemptible = var.gke_a_pool_preemptible
     machine_type = var.gke_a_pool_machine_type
     disk_type = "pd-ssd"
     disk_size_gb = 50
@@ -30,6 +31,6 @@ resource "google_container_node_pool" "a-pool" {
 
   depends_on = [
     var.dependencies,
-    google_container_cluster.gke,
+    google_container_cluster.cluster,
     google_service_account.service_account]
 }

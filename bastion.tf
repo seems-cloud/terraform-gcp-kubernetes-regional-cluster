@@ -12,6 +12,5 @@ module "bastion" {
   provider_subnetwork_name = module.networking.subnetwork_bastion_name
 
   dependencies = [
-    "module.defaults",
     "module.networking"]
 }

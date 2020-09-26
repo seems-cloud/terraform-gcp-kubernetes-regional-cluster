@@ -66,6 +66,10 @@ variable "gke_machine_type" {
 ######################
 # Cluster Pool 1
 
+variable "gke_a_pool_preemptible" {
+  type = string
+}
+
 variable "gke_a_pool_name" {
   type = string
 }

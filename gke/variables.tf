@@ -2,6 +2,9 @@ variable "network_name" {
   type = string
 }
 
+######################
+# Cluster
+
 variable "gke_preemptible" {
   type = bool
 }
@@ -42,6 +45,12 @@ variable "gke_machine_type" {
   type = string
 }
 
+######################
+# Cluster Pool 1
+
+variable "gke_a_pool_preemptible" {
+  type = bool
+}
 variable "gke_a_pool_name" {
   type = string
 }

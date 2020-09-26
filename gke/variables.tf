@@ -2,6 +2,10 @@ variable "network_name" {
   type = string
 }
 
+variable "gke_cluster_preemptible" {
+  type = bool
+}
+
 variable "gke_cluster_name" {
   type = string
 }

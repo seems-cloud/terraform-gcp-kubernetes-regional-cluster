@@ -1,3 +1,7 @@
+variable "random" {
+  type = string
+}
+
 variable "network" {
   type = string
 }
@@ -7,14 +11,6 @@ variable "terraform_user" {
 }
 
 variable "terraform_ssh_keys_pub" {
-  type = string
-}
-
-variable "ansible_user" {
-  type = string
-}
-
-variable "ansible_ssh_keys_pub" {
   type = string
 }
 
@@ -30,15 +26,15 @@ variable "gke_cluster_network_cidr" {
   type = string
 }
 
-variable "gke_normal_pool_name" {
+variable "gke_a_pool_name" {
   type = string
 }
 
-variable "gke_normal_pool_region" {
+variable "gke_a_pool_region" {
   type = string
 }
 
-variable "gke_normal_pool_network_cidr" {
+variable "gke_a_pool_network_cidr" {
   type = string
 }
 

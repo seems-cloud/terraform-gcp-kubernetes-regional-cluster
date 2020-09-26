@@ -19,8 +19,8 @@ resource "google_compute_subnetwork" "gke-regional-cluster" {
 }
 
 resource "google_compute_subnetwork" "gke-regional-cluster-normal-pool" {
-  name = var.gke_normal_pool_name
-  ip_cidr_range = var.gke_normal_pool_network_cidr
+  name = var.gke_a_pool_name
+  ip_cidr_range = var.gke_a_pool_network_cidr
   region = var.gke_cluster_region
   network = google_compute_network.network.name
 

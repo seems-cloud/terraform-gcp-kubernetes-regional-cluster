@@ -26,9 +26,11 @@ resource "google_container_cluster" "regional-cluster" {
   }
 
   node_config {
+    preemptible = var.gke_cluster_preemptible
+
     machine_type = var.gke_cluster_machine_type
     disk_type = "pd-ssd"
-    disk_size_gb = 50
+    disk_size_gb = 100
 
     tags = var.gke_cluster_tags
 

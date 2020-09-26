@@ -1,5 +1,5 @@
 resource "google_compute_firewall" "from-bastion-to-all" {
-  name = "from-bastion-to-cluster"
+  name = "${var.random}-from-bastion-to-cluster"
   network = google_compute_network.network.name
 
   direction = "INGRESS"
@@ -20,7 +20,7 @@ resource "google_compute_firewall" "from-bastion-to-all" {
 }
 
 resource "google_compute_firewall" "from-internet-to-bastion" {
-  name = "from-internet-to-bastion"
+  name = "${var.random}-from-internet-to-bastion"
   network = google_compute_network.network.name
 
   direction = "INGRESS"
@@ -34,25 +34,6 @@ resource "google_compute_firewall" "from-internet-to-bastion" {
     protocol = "tcp"
     ports = [
       "22"]
-  }
-
-  depends_on = [
-    google_compute_network.network]
-}
-
-resource "google_compute_firewall" "from-internet-to-gke-cluster" {
-  name = "from-internet-to-gke-cluster"
-  network = google_compute_network.network.name
-
-  direction = "INGRESS"
-
-  source_ranges = [
-    "0.0.0.0/0"]
-  target_tags = [
-    "gke"]
-
-  allow {
-    protocol = "tcp"
   }
 
   depends_on = [

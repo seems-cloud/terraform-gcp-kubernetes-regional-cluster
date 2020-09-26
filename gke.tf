@@ -5,7 +5,7 @@ module "gke" {
 
   gke_preemptible = var.gke_preemptible
 
-  gke_name = var.gke_name
+  gke_name = local.random
   gke_tags = var.gke_tags
   gke_region = var.gke_region
   gke_zones = var.gke_zones
@@ -15,7 +15,7 @@ module "gke" {
   gke_machine_type = var.gke_machine_type
   gke_init_nodes = var.gke_init_nodes
 
-  gke_a_pool_name = var.gke_a_pool_name
+  gke_a_pool_name = local.gke_a_pool_name
   gke_a_pool_tags = var.gke_a_pool_tags
   gke_a_pool_region = var.gke_a_pool_region
   gke_a_pool_zones = var.gke_a_pool_zones

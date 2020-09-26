@@ -39,7 +39,7 @@ gke_init_nodes = 1
 ##################
 # Cluster Pool A
 
-gke_a_pool_name = "gke-a-pool"
+gke_a_pool_name = "a-pool"
 gke_a_pool_tags = [
   "gke",
   "all"]

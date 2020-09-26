@@ -6,23 +6,15 @@ variable "network" {
   type = string
 }
 
-variable "terraform_user" {
+variable "gke_name" {
   type = string
 }
 
-variable "terraform_ssh_keys_pub" {
+variable "gke_region" {
   type = string
 }
 
-variable "gke_cluster_name" {
-  type = string
-}
-
-variable "gke_cluster_region" {
-  type = string
-}
-
-variable "gke_cluster_network_cidr" {
+variable "gke_network_cidr" {
   type = string
 }
 

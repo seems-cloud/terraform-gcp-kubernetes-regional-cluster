@@ -8,20 +8,20 @@ resource "google_compute_subnetwork" "bastion" {
     google_compute_network.network]
 }
 
-resource "google_compute_subnetwork" "gke-regional-cluster" {
-  name = var.gke_cluster_name
-  ip_cidr_range = var.gke_cluster_network_cidr
-  region = var.gke_cluster_region
+resource "google_compute_subnetwork" "gke" {
+  name = var.gke_name
+  ip_cidr_range = var.gke_network_cidr
+  region = var.gke_region
   network = google_compute_network.network.name
 
   depends_on = [
     google_compute_network.network]
 }
 
-resource "google_compute_subnetwork" "gke-regional-cluster-normal-pool" {
+resource "google_compute_subnetwork" "gke-a-pool" {
   name = var.gke_a_pool_name
   ip_cidr_range = var.gke_a_pool_network_cidr
-  region = var.gke_cluster_region
+  region = var.gke_region
   network = google_compute_network.network.name
 
   depends_on = [

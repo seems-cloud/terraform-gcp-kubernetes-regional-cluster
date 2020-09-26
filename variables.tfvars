@@ -19,6 +19,7 @@ network = "network"
 # Cluster
 
 gke_preemptible = true
+
 gke_name = "gke-cluster"
 gke_tags = [
   "gke",
@@ -38,7 +39,7 @@ gke_init_nodes = 1
 ##################
 # Cluster Pool A
 
-gke_a_pool_name = "gke-pool"
+gke_a_pool_name = "gke-a-pool"
 gke_a_pool_tags = [
   "gke",
   "all"]

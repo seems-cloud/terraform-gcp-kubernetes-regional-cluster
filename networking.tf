@@ -5,12 +5,9 @@ module "networking" {
 
   network = local.network
 
-  terraform_user = var.terraform_user
-  terraform_ssh_keys_pub = var.terraform_ssh_key_pub
-
-  gke_cluster_name = local.gke_cluster_name
-  gke_cluster_region = var.gke_region
-  gke_cluster_network_cidr = var.gke_network_cidr
+  gke_name = local.gke_name
+  gke_region = var.gke_region
+  gke_network_cidr = var.gke_network_cidr
 
   gke_a_pool_name = local.gke_a_pool_name
   gke_a_pool_region = var.gke_a_pool_region

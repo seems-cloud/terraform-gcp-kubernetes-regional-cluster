@@ -5,10 +5,9 @@
 ```bash
 gcloud auth login
 
+# zonal cluster
 gcloud container clusters get-credentials example --zone=us-central1-c
-``` 
 
-## Repositories
+# regional
+gcloud container clusters get-credentials example --region=us-central1
 ``` 
-helm repo add bitnami https://charts.bitnami.com/bitnami
-```

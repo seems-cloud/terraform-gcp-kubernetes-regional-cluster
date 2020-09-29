@@ -1,3 +1,5 @@
+project_id = "molten-infusion-277321"
+
 region = "us-central1"
 
 prefix = "a" # must be [a-z]
@@ -8,6 +10,7 @@ prefix = "a" # must be [a-z]
 terraform_user = "terraform"
 terraform_ssh_key_pub = <<EndOfMessage
 terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQClIqY2ukU+vVw+ZYMcbRFtmgbpXFL9TV0yr8F7mBnBN/bevqOWpsdn6ePqU0yC9uIcU1sYfRuwPYqgvtnGSfj8WteysOblUuwsU1CGq4s5cunmvFM2dvNMZJILpw/k843Z4uC24pIbVJE7G1FoRrnj9/CN9GhdwaJxN42F8cfOHw==
+terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC4Nbhi7SDAXyamRH/tQJjtSGMgM+slUS/XYppjp5H9Qtrarhdy0uPOth+f792pFFPgAXR37v9ACjU/N1iq3a2++DUyDEdyOsjzCr1GOo6DIjVX5NwF3roTIXnB7P/n92KcEeOw0U9PnU9WUmXawcrCGiHg9tgHk2APzGTvft1SXa7l9mmkee/y6NL7OLRgKOa4NgL8EmBnSQBkXafzYTOZgtGf8/4zKp0NWI7sG+zw0TFOsUeUk4T+XJmK63KXfdtCDElZKHz5wjyAnt4VkMNRSfqSdYYYPZ5eoQwrlaO8gl0mTZT6auoaOOkxvJzX4RGRnAWZnXuMCVcACtD62317+sOXTAjvvcAiOeBJw0tduWcK39aulItvQstP3nA3bXGYjRcQbCX3ff7uL5TcUSw4lIyD0qSaGU2foD9BEsT6EeLR9NsSUW4kvBZdq7AvCf/8mc2n/oz0kh/tx+MDyS8IoVyTVLJ/sttFhWOjzWcBq4z5svbamriRdf3Yp4OgN1s=
 EndOfMessage
 
 ##################

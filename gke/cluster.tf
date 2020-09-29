@@ -35,6 +35,12 @@ resource "google_container_cluster" "cluster" {
     tags = var.gke_tags
 
     service_account = google_service_account.service_account.email
+    
+    oauth_scopes = [
+      "https://www.googleapis.com/auth/logging.write",
+      "https://www.googleapis.com/auth/monitoring",
+      "https://www.googleapis.com/auth/ndev.clouddns.readwrite",
+    ]
   }
 
   addons_config {
@@ -64,6 +70,10 @@ resource "google_container_cluster" "cluster" {
       maximum = 50
       resource_type = "memory"
     }
+  }
+
+  workload_identity_config {
+    identity_namespace = "${var.project_id}.svc.id.goog"
   }
 
   depends_on = [

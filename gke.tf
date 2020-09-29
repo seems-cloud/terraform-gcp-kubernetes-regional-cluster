@@ -1,6 +1,7 @@
 module "gke" {
   source = "./gke"
 
+  project_id = var.project_id
   network_name = local.network
 
   gke_preemptible = var.gke_preemptible

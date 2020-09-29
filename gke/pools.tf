@@ -22,6 +22,12 @@ resource "google_container_node_pool" "a-pool" {
     tags = var.gke_tags
 
     service_account = google_service_account.service_account.email
+    
+    oauth_scopes = [
+      "https://www.googleapis.com/auth/logging.write",
+      "https://www.googleapis.com/auth/monitoring",
+      "https://www.googleapis.com/auth/ndev.clouddns.readwrite",
+    ]
   }
 
   management {

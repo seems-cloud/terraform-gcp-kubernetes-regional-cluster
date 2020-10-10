@@ -56,7 +56,7 @@ gke_a_pool_zones = [
 gke_a_pool_machine_type = "n1-standard-2"
 gke_a_pool_network_cidr = "10.0.11.0/24"
 gke_a_pool_init_nodes = 1
-gke_a_pool_min_nodes = 1
+gke_a_pool_min_nodes = 3
 gke_a_pool_max_nodes = 3
 
 ##################

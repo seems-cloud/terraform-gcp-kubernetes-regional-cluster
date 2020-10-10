@@ -9,6 +9,10 @@ variable "network_name" {
 ######################
 # Cluster
 
+variable "gke_authorized_host" {
+  type = string
+}
+
 variable "gke_preemptible" {
   type = bool
 }

@@ -8,7 +8,7 @@ resource "google_compute_subnetwork" "bastion" {
     google_compute_network.network]
 }
 
-resource "google_compute_subnetwork" "gke" {
+resource "google_compute_subnetwork" "gke-cluster" {
   name = var.gke_name
   ip_cidr_range = var.gke_network_cidr
   region = var.gke_region

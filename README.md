@@ -182,6 +182,6 @@ kubectl annotate serviceaccount \
     --namespace=external-dns external-dns "iam.gke.io/gcp-service-account=$iam_email"
 ```
 
-If pod returns unathorized, try delete `external-dns`. Correct log line:
+If `external-dns` pod returns unathorized in log, try delete this pod. Correct log line, should be:
 
 `All records are already up to date`

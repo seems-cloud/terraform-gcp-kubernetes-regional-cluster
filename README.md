@@ -100,6 +100,7 @@ gcloud iam service-accounts add-iam-policy-binding "$iam_email" \
 kubectl create clusterrolebinding cluster-admin-me \
     --clusterrole=cluster-admin \
     --user="$(gcloud config get-value account)"
+```
 
 ### Deploy External DNS
 ```bash

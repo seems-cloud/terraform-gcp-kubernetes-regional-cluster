@@ -29,9 +29,9 @@ gke_tags = [
 gke_region = "us-central1"
 gke_zones = [
   "us-central1-a",
-  "us-central1-b",
-  "us-central1-c",
-  "us-central1-f"
+#  "us-central1-b",
+#  "us-central1-c",
+#  "us-central1-f"
 ]
 gke_network_cidr = "10.0.10.0/24"
 gke_machine_type = "n1-standard-2"

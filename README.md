@@ -167,7 +167,7 @@ spec:
             - --provider=google
             - --google-project=molten-infusion-277321
             - --registry=txt
-            - --txt-owner-id=my-identifier
+            - --txt-owner-id=seems-cloud
           image: k8s.gcr.io/external-dns/external-dns:v0.7.3
           name: external-dns
       securityContext:

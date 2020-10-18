@@ -3,7 +3,6 @@
 ## Get credentials
 
 ### Install `gcloud`
-
 ```bash
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 
@@ -12,7 +11,7 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyr
 sudo apt-get update && sudo apt-get install google-cloud-sdk kubectl
 ```
 
-### Login
+### Login and config project
 ```bash
 gcloud auth login
 
@@ -22,18 +21,15 @@ gcloud config set project project_id
 ```
 
 ### Get `.kube/confg`
-
 ```
 gcloud container clusters get-credentials example --zone=us-central1-c
 
-# regional
 gcloud container clusters get-credentials example --region=us-central1
 ``` 
 
 ## Affinity
 
 ### Pod Affinity
-
 `requiredDuringSchedulingIgnoredDuringExecution`
 
 ```yaml

@@ -4,12 +4,6 @@ provider "google" {
   region = var.region
 }
 
-terraform {
-  backend "local" {
-    path = ".states/terraform.tfstate"
-  }
-}
-
 resource "google_compute_project_metadata" "metadata" {
   metadata = {
     ssh-keys = var.terraform_ssh_key_pub

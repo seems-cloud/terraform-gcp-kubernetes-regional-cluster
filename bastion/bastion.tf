@@ -1,21 +1,21 @@
-resource "google_compute_instance" "bastion" {
-  name = var.bastion_name
-  machine_type = var.bastion_machine_type
+resource "google_compute_instance" "aaa_instance_aaa" {
+  name = var.aaa_instance_aaa-name
+  machine_type = var.aaa_instance_aaa-type
 
-  zone = var.bastion_zone
+  zone = var.aaa_instance_aaa-zone
 
-  tags = var.bastion_tags
+  tags = var.aaa_instance_aaa-tags
 
   boot_disk {
     initialize_params {
-      image = var.bastion_image
+      image = var.aaa_instance_aaa-image
     }
   }
   network_interface {
-    subnetwork = var.provider_subnetwork_name
+    subnetwork = var.aaa_instance_aaa-subnetwork_name
 
     access_config {
-      nat_ip = var.provider_address
+      nat_ip = var.aaa_instance_aaa-external_address
     }
   }
 

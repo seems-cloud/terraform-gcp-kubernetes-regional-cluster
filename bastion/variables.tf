@@ -1,35 +1,38 @@
-variable "bastion_image" {
+# Network
+variable "aaa_instance_aaa-external_address" {
   type = string
 }
 
-variable "bastion_name" {
+variable "aaa_instance_aaa-subnetwork_name" {
   type = string
 }
 
-variable "bastion_tags" {
+# Instance
+variable "aaa_instance_aaa-image" {
+  type = string
+}
+
+variable "aaa_instance_aaa-name" {
+  type = string
+}
+
+variable "aaa_instance_aaa-tags" {
   type = list(string)
 }
 
-variable "bastion_zone" {
+variable "aaa_instance_aaa-zone" {
   type = string
 }
 
-variable "bastion_network_cidr" {
+variable "aaa_instance_aaa-type" {
   type = string
 }
 
-variable "bastion_machine_type" {
+variable "aaa_instance_aaa-cidr" {
   type = string
 }
 
-variable "provider_subnetwork_name" {
-  type = string
-}
-
-variable "provider_address" {
-  type = string
-}
-
+# Dependencies
 variable "dependencies" {
   type = list(string)
 }

@@ -1,72 +1,57 @@
+# Configuration
 project_id = "molten-infusion-277321"
-
 region = "us-central1"
-
 prefix = "a" # must be [a-z]
 
-##################
-# General
-
+# Keys
 terraform_user = "terraform"
 terraform_ssh_key_pub = <<EndOfMessage
-terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgQClIqY2ukU+vVw+ZYMcbRFtmgbpXFL9TV0yr8F7mBnBN/bevqOWpsdn6ePqU0yC9uIcU1sYfRuwPYqgvtnGSfj8WteysOblUuwsU1CGq4s5cunmvFM2dvNMZJILpw/k843Z4uC24pIbVJE7G1FoRrnj9/CN9GhdwaJxN42F8cfOHw==
-terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCgJYQaQJUSwrDVQoCyOBMHaOM0bFg6b5SQN+qulnG2J3AEg1uVOE+NTfCDERUY2pvaMARL1iM6XzxhBTqy2mC69FftWwoGTCu8PBvuAX+meI/I+9BjLf389ev72OgGUTEoBcvC82U/iaBvuK7cdOGFx0yLKGA/sP34Ax6xkqIQxKaskzcWjCMmNt2nxAd0nQpVkJzjBx/neaK9jWsZB1OYn1+i9nF6Hq4o0VESvvSzobScuw29IJV0Fji7IL71pIlFLf6CzHl95sXo8nzqvJ6qoWJzvaJ1tN1SSQjKrNBR5/5rx2P5hh81nfR+fHaIeDN+r8TSgodrREy0BvuoLlTV1KzIUTaIv6IvbxLmCdegq+TgsKDGFxWCAlctRZTZ8gRd6OwBUPeQllIaP+mAJs3IZdSyeI0F0Wmv7iay+XXjGe3QwutSrWSPXDKdcXhwBW8Y47suh5z46pFVYYMACSgQNVO6/Bunmnh8MdSzozFTR91K1qpdOyO2+41v7LUcO10=
+terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQClUEbe96eykDQPeK3Eizjz9E6/QIglt/1cpsz5UVvO4DKw8yOYg2ikUuHrgdUKX//93yNyrHPgQSoRph/zEw1TWgNwWnXPo9XjRWt+QYz1hV69Ut4ONoRCQYlRmdXSMaQojQDTwX6/t8cFzSRjLk1dzuitTDJ+M9LK1rLCxawQGMo51GdbzwmEBBAKxHA7umoTeyvYTicTGtSZa4kJlnWkMWT1zgdbfjVaKhc/nxkjpDReyEUSxWn0RV8YSnk1cSdVXzgm3ZN1iJ6kgBgefJKjkS1p/rpS8j2+gesnCbGISYjXc9PM/WEH+HP7n+42ue37NqOACsPOBLX8SW+KOzsaI7IL1JxM9kroddnDaq8dhR6HRv/e+A9+rk7DaDRnoEk/IrWDD9y7BDrzFeBFH1qYoVcrn3i6akMJ/2fWjbenQ46+tyvOZjnioih1BUtqOLN0ZUIaakKaSxS1SJpb5LAhSEg3gJozYPLdOPKim42ms7Q39beYAzcFmfLr3DrAvlk=
 EndOfMessage
 
-##################
-# Networking
+# Network
+aaa_vpc_aaa = "network"
 
-network = "network"
-
-##################
-# Cluster
-
-gke_preemptible = true
-gke_name = "gke-cluster"
-gke_tags = [
+# GKE Cluster
+aaa_gke_aaa-preemptible = true
+aaa_gke_aaa-name = "gke-cluster"
+aaa_gke_aaa-tags = [
   "gke",
   "all"]
-gke_region = "us-central1"
-gke_zones = [
-  "us-central1-a",
-#  "us-central1-b",
-#  "us-central1-c",
-#  "us-central1-f"
-]
-gke_network_cidr = "10.0.10.0/24"
-gke_machine_type = "n1-standard-2"
-gke_min_master_version = "1.16.13-gke.401"
-gke_init_nodes = 1
+aaa_gke_aaa-region = "us-central1"
+aaa_gke_aaa-zones = [
+  "us-central1-a"
+  /*, "us-central1-b", "us-central1-c", "us-central1-f"*/]
+aaa_gke_aaa-cidr = "10.0.10.0/24"
+aaa_gke_aaa-type = "n1-standard-2"
+aaa_gke_aaa-min_version = "1.19.10-gke.1600"
+aaa_gke_aaa-init = 1
 
-##################
-# Cluster Pool A
-
-gke_a_pool_preemptible = true
-gke_a_pool_name = "a-pool"
-gke_a_pool_tags = [
+# GKE Pool
+aaa_gke_pool_aaa-preemptible = true
+aaa_gke_pool_aaa-name = "a-pool"
+aaa_gke_pool_aaa-tags = [
   "gke",
   "all"]
-gke_a_pool_region = "us-central1"
-gke_a_pool_zones = [
+aaa_gke_pool_aaa-region = "us-central1"
+aaa_gke_pool_aaa-zones = [
   "us-central1-a",
   "us-central1-b",
   "us-central1-c",
   "us-central1-f"
 ]
-gke_a_pool_machine_type = "n1-standard-2"
-gke_a_pool_network_cidr = "10.0.11.0/24"
-gke_a_pool_init_nodes = 1
-gke_a_pool_min_nodes = 3
-gke_a_pool_max_nodes = 3
+aaa_gke_pool_aaa-type = "n1-standard-2"
+aaa_gke_pool_aaa-cidr = "10.0.11.0/24"
+aaa_gke_pool_aaa-init = 1
+aaa_gke_pool_aaa-min = 3
+aaa_gke_pool_aaa-max = 3
 
-##################
-# Bastion
-
-bastion_name = "bastion"
-bastion_tags = [
+# Instance
+aaa_instance_aaa-name = "bastion"
+aaa_instance_aaa-tags = [
   "bastion"]
-bastion_region = "us-central1"
-bastion_zone = "us-central1-a"
-bastion_machine_type = "n1-standard-1"
-bastion_image = "ubuntu-os-cloud/ubuntu-1804-lts"
-bastion_network_cidr = "10.0.1.0/24"
+aaa_instance_aaa-region = "us-central1"
+aaa_instance_aaa-zone = "us-central1-a"
+aaa_instance_aaa-type = "e2-highcpu-8"
+aaa_instance_aaa-image = "ubuntu-os-cloud/ubuntu-1804-lts"
+aaa_instance_aaa-cidr = "10.0.1.0/24"

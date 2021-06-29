@@ -2,46 +2,50 @@ variable "random" {
   type = string
 }
 
-variable "network" {
+# Network
+variable "aaa_vpc_aaa" {
   type = string
 }
 
-variable "gke_name" {
+# Instance
+variable "aaa_instance_aaa-name" {
   type = string
 }
 
-variable "gke_region" {
+variable "aaa_instance_aaa-region" {
   type = string
 }
 
-variable "gke_network_cidr" {
+variable "aaa_instance_aaa-zone" {
   type = string
 }
 
-variable "gke_a_pool_name" {
+variable "aaa_instance_aaa-cidr" {
   type = string
 }
 
-variable "gke_a_pool_region" {
+# GKE Cluster
+variable "aaa_gke_aaa-name" {
   type = string
 }
 
-variable "gke_a_pool_network_cidr" {
+variable "aaa_gke_aaa-region" {
   type = string
 }
 
-variable "bastion_name" {
+variable "aaa_gke_aaa-cidr" {
   type = string
 }
 
-variable "bastion_region" {
+# GKE Pool
+variable "aaa_gke_pool_aaa-name" {
   type = string
 }
 
-variable "bastion_zone" {
+variable "aaa_gke_pool_aaa-region" {
   type = string
 }
 
-variable "bastion_network_cidr" {
+variable "aaa_gke_pool_aaa-cidr" {
   type = string
 }

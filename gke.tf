@@ -2,31 +2,35 @@ module "gke" {
   source = "./gke"
 
   project_id = var.project_id
-  network_name = local.network
 
-  gke_authorized_host = module.bastion.bastion_internal_address
+  # Network
+  aaa_vpc_aaa = local.aaa_vpc_aaa
 
-  gke_preemptible = var.gke_preemptible
-  gke_name = local.random
-  gke_tags = var.gke_tags
-  gke_region = var.gke_region
-  gke_zones = var.gke_zones
-  gke_network_cidr = var.gke_network_cidr
-  gke_subnetwork_name = module.networking.subnetwork_gke_name
-  gke_min_master_version = var.gke_min_master_version
-  gke_machine_type = var.gke_machine_type
-  gke_init_nodes = var.gke_init_nodes
+  # GKE Cluster
+  aaa_gke_aaa-preemptible = var.aaa_gke_aaa-preemptible
+  aaa_gke_aaa-name = local.random
+  aaa_gke_aaa-authorized = module.bastion.aaa_instance_aaa-internal_address
+  aaa_gke_aaa-tags = var.aaa_gke_aaa-tags
+  aaa_gke_aaa-region = var.aaa_gke_aaa-region
+  aaa_gke_aaa-zones = var.aaa_gke_aaa-zones
+  aaa_gke_aaa-cidr = var.aaa_gke_aaa-cidr
+  aaa_gke_aaa-type = var.aaa_gke_aaa-type
+  aaa_gke_aaa-init = var.aaa_gke_aaa-init
+  aaa_gke_aaa-subnetwork_name = module.networking.aaa_gke_aaa-subnetwork_name
+  aaa_gke_aaa-min_version = var.aaa_gke_aaa-min_version
 
-  gke_a_pool_preemptible = var.gke_a_pool_preemptible
-  gke_a_pool_name = local.gke_a_pool_name
-  gke_a_pool_tags = var.gke_a_pool_tags
-  gke_a_pool_region = var.gke_a_pool_region
-  gke_a_pool_zones = var.gke_a_pool_zones
-  gke_a_pool_machine_type = var.gke_a_pool_machine_type
-  gke_a_pool_init_nodes = var.gke_a_pool_init_nodes
-  gke_a_pool_mix_nodes_nodes = var.gke_a_pool_min_nodes
-  gke_a_pool_max_nodes_nodes = var.gke_a_pool_max_nodes
+  # GKE Pool
+  aaa_gke_pool_aaa-preemptible = var.aaa_gke_pool_aaa-preemptible
+  aaa_gke_pool_aaa-name = local.aaa_gke_pool_aaa-name
+  aaa_gke_pool_aaa-tags = var.aaa_gke_pool_aaa-tags
+  aaa_gke_pool_aaa-region = var.aaa_gke_pool_aaa-region
+  aaa_gke_pool_aaa-zones = var.aaa_gke_pool_aaa-zones
+  aaa_gke_pool_aaa-type = var.aaa_gke_pool_aaa-type
+  aaa_gke_pool_aaa-init = var.aaa_gke_pool_aaa-init
+  aaa_gke_pool_aaa-min = var.aaa_gke_pool_aaa-min
+  aaa_gke_pool_aaa-max = var.aaa_gke_pool_aaa-max
 
+  # Dependencies
   dependencies = [
     "module.networking",
     "module.bastion"]

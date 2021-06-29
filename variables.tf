@@ -1,3 +1,4 @@
+# Configuration
 variable "project_id" {
   type = string
 }
@@ -10,9 +11,7 @@ variable "prefix" {
   type = string
 }
 
-######################
-# General
-
+# Keys
 variable "terraform_user" {
   type = string
 }
@@ -21,122 +20,114 @@ variable "terraform_ssh_key_pub" {
   type = string
 }
 
-######################
 # Network
-
-variable "network" {
+variable "aaa_vpc_aaa" {
   type = string
 }
 
-######################
-# Cluster
-
-variable "gke_preemptible" {
+# GKE Clusters
+variable "aaa_gke_aaa-preemptible" {
   type = bool
 }
 
-variable "gke_name" {
+variable "aaa_gke_aaa-name" {
   type = string
 }
 
-variable "gke_tags" {
+variable "aaa_gke_aaa-tags" {
   type = list(string)
 }
 
-variable "gke_region" {
+variable "aaa_gke_aaa-region" {
   type = string
 }
 
-variable "gke_zones" {
+variable "aaa_gke_aaa-zones" {
   type = list(string)
 }
 
-variable "gke_init_nodes" {
+variable "aaa_gke_aaa-cidr" {
+  type = string
+}
+
+variable "aaa_gke_aaa-type" {
+  type = string
+}
+
+variable "aaa_gke_aaa-min_version" {
+  type = string
+}
+
+variable "aaa_gke_aaa-init" {
   type = number
 }
 
-variable "gke_network_cidr" {
+# GKE Pools
+variable "aaa_gke_pool_aaa-preemptible" {
   type = string
 }
 
-variable "gke_min_master_version" {
+variable "aaa_gke_pool_aaa-name" {
   type = string
 }
 
-variable "gke_machine_type" {
-  type = string
-}
-
-######################
-# Cluster Pool 1
-
-variable "gke_a_pool_preemptible" {
-  type = string
-}
-
-variable "gke_a_pool_name" {
-  type = string
-}
-
-variable "gke_a_pool_network_cidr" {
-  type = string
-}
-
-variable "gke_a_pool_tags" {
+variable "aaa_gke_pool_aaa-tags" {
   type = list(string)
 }
 
-variable "gke_a_pool_region" {
+variable "aaa_gke_pool_aaa-region" {
   type = string
 }
 
-variable "gke_a_pool_zones" {
+variable "aaa_gke_pool_aaa-zones" {
   type = list(string)
 }
 
-variable "gke_a_pool_machine_type" {
+variable "aaa_gke_pool_aaa-type" {
   type = string
 }
 
-variable "gke_a_pool_init_nodes" {
+variable "aaa_gke_pool_aaa-cidr" {
+  type = string
+}
+
+variable "aaa_gke_pool_aaa-init" {
   type = number
 }
 
-variable "gke_a_pool_min_nodes" {
+variable "aaa_gke_pool_aaa-min" {
   type = number
 }
 
-variable "gke_a_pool_max_nodes" {
+variable "aaa_gke_pool_aaa-max" {
   type = number
 }
 
-########################
 # Bastion
-
-variable "bastion_name" {
+variable "aaa_instance_aaa-name" {
   type = string
 }
 
-variable "bastion_tags" {
+variable "aaa_instance_aaa-tags" {
   type = list(string)
 }
 
-variable "bastion_region" {
+variable "aaa_instance_aaa-region" {
   type = string
 }
 
-variable "bastion_zone" {
+variable "aaa_instance_aaa-zone" {
   type = string
 }
 
-variable "bastion_image" {
+variable "aaa_instance_aaa-image" {
   type = string
 }
 
-variable "bastion_network_cidr" {
+variable "aaa_instance_aaa-cidr" {
   type = string
 }
 
-variable "bastion_machine_type" {
+variable "aaa_instance_aaa-type" {
   type = string
 }

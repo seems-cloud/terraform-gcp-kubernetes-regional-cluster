@@ -3,18 +3,22 @@ module "networking" {
 
   random = local.random
 
-  network = local.network
+  # Network
+  aaa_vpc_aaa = local.aaa_vpc_aaa
 
-  gke_name = local.gke_name
-  gke_region = var.gke_region
-  gke_network_cidr = var.gke_network_cidr
+  # Instance
+  aaa_instance_aaa-name = local.aaa_instance_aaa-name
+  aaa_instance_aaa-region = var.aaa_instance_aaa-region
+  aaa_instance_aaa-zone = var.aaa_instance_aaa-zone
+  aaa_instance_aaa-cidr = var.aaa_instance_aaa-cidr
 
-  gke_a_pool_name = local.gke_a_pool_name
-  gke_a_pool_region = var.gke_a_pool_region
-  gke_a_pool_network_cidr = var.gke_a_pool_network_cidr
+  # GKE Cluster
+  aaa_gke_aaa-name = local.aaa_gke_aaa-name
+  aaa_gke_aaa-region = var.aaa_gke_aaa-region
+  aaa_gke_aaa-cidr = var.aaa_gke_aaa-cidr
 
-  bastion_name = local.bastion_name
-  bastion_region = var.bastion_region
-  bastion_zone = var.bastion_zone
-  bastion_network_cidr = var.bastion_network_cidr
+  # GKE Pool
+  aaa_gke_pool_aaa-name = local.aaa_gke_pool_aaa-name
+  aaa_gke_pool_aaa-region = var.aaa_gke_pool_aaa-region
+  aaa_gke_pool_aaa-cidr = var.aaa_gke_pool_aaa-cidr
 }

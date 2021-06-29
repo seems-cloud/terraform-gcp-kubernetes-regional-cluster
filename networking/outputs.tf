@@ -1,27 +1,28 @@
-output "network_name" {
-  value = google_compute_network.network.name
+# Network
+output "aaa_vpc_aaa-name" {
+  value = google_compute_network.aaa_vpc_aaa.name
 }
 
-output "network_id" {
-  value = google_compute_network.network.id
+output "aaa_vpc_aaa-id" {
+  value = google_compute_network.aaa_vpc_aaa.id
 }
 
-output "subnetwork_bastion_name" {
-  value = google_compute_subnetwork.bastion.name
+output "aaa_instance_aaa-subnetwork_name" {
+  value = google_compute_subnetwork.aaa_instance_aaa.name
 }
 
-output "address_bastion_address" {
-  value = google_compute_address.bastion.address
+output "aaa_instance_aaa-external_address" {
+  value = google_compute_address.aaa_instance_aaa-external.address
 }
 
-output "subnetwork_gke_name" {
-  value = google_compute_subnetwork.gke-cluster.name
+output "aaa_gke_aaa-subnetwork_name" {
+  value = google_compute_subnetwork.aaa_gke_aaa.name
 }
 
-output "subnetwork_gke_a_pool_name" {
-  value = google_compute_subnetwork.gke-a-pool
+output "aaa_gke_pool_aaa-subnetwork_name" {
+  value = google_compute_subnetwork.aaa_gke_pool_aaa.name
 }
 
-output "router_nat_gke_cluster" {
-  value = google_compute_router_nat.gke-router-nat
+output "aaa_gke_aaa-router_nat" {
+  value = google_compute_router_nat.aaa_gke_aaa
 }

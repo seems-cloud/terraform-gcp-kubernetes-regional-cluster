@@ -1,6 +1,6 @@
 resource "google_compute_firewall" "from-bastion-to-all" {
   name = "${var.random}-from-bastion-to-cluster"
-  network = google_compute_network.network.name
+  network = google_compute_network.aaa_vpc_aaa.name
 
   direction = "INGRESS"
 
@@ -16,12 +16,12 @@ resource "google_compute_firewall" "from-bastion-to-all" {
   }
 
   depends_on = [
-    google_compute_network.network]
+    google_compute_network.aaa_vpc_aaa]
 }
 
 resource "google_compute_firewall" "from-internet-to-bastion" {
   name = "${var.random}-from-internet-to-bastion"
-  network = google_compute_network.network.name
+  network = google_compute_network.aaa_vpc_aaa.name
 
   direction = "INGRESS"
 
@@ -37,5 +37,5 @@ resource "google_compute_firewall" "from-internet-to-bastion" {
   }
 
   depends_on = [
-    google_compute_network.network]
+    google_compute_network.aaa_vpc_aaa]
 }

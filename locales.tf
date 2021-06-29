@@ -6,10 +6,10 @@ locals {
 
   # Instance
   aaa_instance_aaa-name = "${local.random}-${var.aaa_instance_aaa-name}"
-  
+
   # GKE Cluster
   aaa_gke_aaa-name = "${local.random}-${var.aaa_gke_aaa-name}"
 
   # GKE Pool
-  aaa_gke_pool_aaa-name = "${local.random}-${var.aaa_gke_pool_aaa-name}"
+  aaa_gke_pool_aaa-name = var.aaa_gke_pool_aaa-name
 }

@@ -14,7 +14,7 @@ aaa_vpc_aaa = "network"
 
 # GKE Cluster
 aaa_gke_aaa-preemptible = true
-aaa_gke_aaa-name = "gke-cluster"
+aaa_gke_aaa-name = "example"
 aaa_gke_aaa-tags = [
   "gke",
   "all"]
@@ -29,7 +29,7 @@ aaa_gke_aaa-init = 1
 
 # GKE Pool
 aaa_gke_pool_aaa-preemptible = true
-aaa_gke_pool_aaa-name = "a-pool"
+aaa_gke_pool_aaa-name = "mini-pool"
 aaa_gke_pool_aaa-tags = [
   "gke",
   "all"]

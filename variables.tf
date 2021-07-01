@@ -103,7 +103,11 @@ variable "aaa_gke_pool_aaa-max" {
   type = number
 }
 
-# Bastion
+# Instance
+variable "aaa_instance_aaa-preemptible" {
+  type = bool
+}
+
 variable "aaa_instance_aaa-name" {
   type = string
 }

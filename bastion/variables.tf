@@ -8,6 +8,10 @@ variable "aaa_instance_aaa-subnetwork_name" {
 }
 
 # Instance
+variable "aaa_instance_aaa-preemptible" {
+  type = bool
+}
+
 variable "aaa_instance_aaa-image" {
   type = string
 }

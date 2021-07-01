@@ -19,6 +19,11 @@ resource "google_compute_instance" "aaa_instance_aaa" {
     }
   }
 
+  scheduling {
+    preemptible = var.aaa_instance_aaa-preemptible
+    automatic_restart = false
+  }
+
   allow_stopping_for_update = true
 
   depends_on = [

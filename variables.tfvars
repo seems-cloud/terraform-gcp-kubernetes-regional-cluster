@@ -50,6 +50,7 @@ aaa_gke_pool_aaa-min = 1
 aaa_gke_pool_aaa-max = 1
 
 # Instance
+aaa_instance_aaa-preemptible = true
 aaa_instance_aaa-name = "bastion"
 aaa_instance_aaa-tags = [
   "bastion"]

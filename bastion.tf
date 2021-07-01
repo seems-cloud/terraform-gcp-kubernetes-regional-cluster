@@ -6,6 +6,7 @@ module "bastion" {
   aaa_instance_aaa-subnetwork_name = module.networking.aaa_instance_aaa-subnetwork_name
 
   # Instance
+  aaa_instance_aaa-preemptible = var.aaa_instance_aaa-preemptible
   aaa_instance_aaa-image = var.aaa_instance_aaa-image
   aaa_instance_aaa-name = local.aaa_instance_aaa-name
   aaa_instance_aaa-tags = var.aaa_instance_aaa-tags

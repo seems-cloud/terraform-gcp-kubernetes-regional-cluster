@@ -10,7 +10,7 @@ resource "google_container_cluster" "aaa_gke_aaa" {
   subnetwork = var.aaa_gke_aaa-subnetwork_name
 
   initial_node_count = var.aaa_gke_aaa-init
-  remove_default_node_pool = true
+  remove_default_node_pool = false
 
   private_cluster_config {
     enable_private_nodes = true

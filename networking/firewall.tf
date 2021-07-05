@@ -33,7 +33,7 @@ resource "google_compute_firewall" "from-internet-to-bastion" {
   allow {
     protocol = "tcp"
     ports = [
-      "22"]
+      "22", "8080"]
   }
 
   depends_on = [

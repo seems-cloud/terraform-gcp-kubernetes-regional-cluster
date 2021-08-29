@@ -1,4 +1,4 @@
-# Terraform GCP Regional Kubernetes Cluster
+# Terraform GCP Kubernetes Regional Cluster
 
 ## Get credentials
 

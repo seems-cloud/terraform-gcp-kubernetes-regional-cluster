@@ -12,15 +12,10 @@ https://cloud.google.com/sdk/docs/install
 gcloud auth login
 
 gcloud projects list
-
 gcloud config set project project_id
-```
 
-### Get `.kube/confg`
-```
-gcloud container clusters get-credentials example --zone=us-central1-c
-
-gcloud container clusters get-credentials example --region=us-central1
+gcloud container clusters list
+gcloud container clusters get-credentials --region=us-central1 example
 ``` 
 
 ## Affinity

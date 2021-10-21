@@ -9,7 +9,6 @@ module "gke" {
   # GKE Cluster
   aaa_gke_aaa-preemptible = var.aaa_gke_aaa-preemptible
   aaa_gke_aaa-name = local.aaa_gke_aaa-name
-  aaa_gke_aaa-authorized = module.bastion.aaa_instance_aaa-internal_address
   aaa_gke_aaa-tags = var.aaa_gke_aaa-tags
   aaa_gke_aaa-region = var.aaa_gke_aaa-region
   aaa_gke_aaa-zones = var.aaa_gke_aaa-zones

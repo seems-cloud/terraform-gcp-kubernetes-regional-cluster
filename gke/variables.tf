@@ -16,10 +16,6 @@ variable "aaa_gke_aaa-name" {
   type = string
 }
 
-variable "aaa_gke_aaa-authorized" {
-  type = string
-}
-
 variable "aaa_gke_aaa-tags" {
   type = list(string)
 }

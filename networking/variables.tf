@@ -7,23 +7,6 @@ variable "aaa_vpc_aaa" {
   type = string
 }
 
-# Instance
-variable "aaa_instance_aaa-name" {
-  type = string
-}
-
-variable "aaa_instance_aaa-region" {
-  type = string
-}
-
-variable "aaa_instance_aaa-zone" {
-  type = string
-}
-
-variable "aaa_instance_aaa-cidr" {
-  type = string
-}
-
 # GKE Cluster
 variable "aaa_gke_aaa-name" {
   type = string

@@ -7,14 +7,6 @@ output "aaa_vpc_aaa-id" {
   value = google_compute_network.aaa_vpc_aaa.id
 }
 
-output "aaa_instance_aaa-subnetwork_name" {
-  value = google_compute_subnetwork.aaa_instance_aaa.name
-}
-
-output "aaa_instance_aaa-external_address" {
-  value = google_compute_address.aaa_instance_aaa-external.address
-}
-
 output "aaa_gke_aaa-subnetwork_name" {
   value = google_compute_subnetwork.aaa_gke_aaa.name
 }

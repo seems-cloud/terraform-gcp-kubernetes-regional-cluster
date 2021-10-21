@@ -48,14 +48,3 @@ aaa_gke_pool_aaa-type = "e2-highcpu-2"
 aaa_gke_pool_aaa-init = 1
 aaa_gke_pool_aaa-min = 1
 aaa_gke_pool_aaa-max = 1
-
-# Instance
-aaa_instance_aaa-preemptible = true
-aaa_instance_aaa-name = "bastion"
-aaa_instance_aaa-tags = [
-  "bastion"]
-aaa_instance_aaa-region = "us-central1"
-aaa_instance_aaa-zone = "us-central1-a"
-aaa_instance_aaa-type = "e2-highcpu-2"
-aaa_instance_aaa-image = "ubuntu-os-cloud/ubuntu-1804-lts"
-aaa_instance_aaa-cidr = "10.0.1.0/24"

@@ -12,22 +12,8 @@ resource "google_container_cluster" "aaa_gke_aaa" {
   initial_node_count = var.aaa_gke_aaa-init
   remove_default_node_pool =  true
 
-  private_cluster_config {
-    enable_private_nodes = true
-    enable_private_endpoint = true
-
-    master_ipv4_cidr_block = "172.16.0.0/28"
-  }
-
   ip_allocation_policy {
 
-  }
-
-  master_authorized_networks_config {
-    cidr_blocks {
-      display_name = "bastion"
-      cidr_block = format("%s/32", var.aaa_gke_aaa-authorized)
-    }
   }
 
   master_auth {

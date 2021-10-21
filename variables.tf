@@ -102,36 +102,3 @@ variable "aaa_gke_pool_aaa-min" {
 variable "aaa_gke_pool_aaa-max" {
   type = number
 }
-
-# Instance
-variable "aaa_instance_aaa-preemptible" {
-  type = bool
-}
-
-variable "aaa_instance_aaa-name" {
-  type = string
-}
-
-variable "aaa_instance_aaa-tags" {
-  type = list(string)
-}
-
-variable "aaa_instance_aaa-region" {
-  type = string
-}
-
-variable "aaa_instance_aaa-zone" {
-  type = string
-}
-
-variable "aaa_instance_aaa-image" {
-  type = string
-}
-
-variable "aaa_instance_aaa-cidr" {
-  type = string
-}
-
-variable "aaa_instance_aaa-type" {
-  type = string
-}

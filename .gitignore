@@ -1,5 +1,4 @@
 .idea
 .states
 .terraform
-.credentials.json
 .terraform.lock.hcl

@@ -27,7 +27,7 @@ aaa_gke_aaa-zones = [
 ]
 aaa_gke_aaa-cidr = "10.0.10.0/24"
 aaa_gke_aaa-type = "e2-highcpu-2"
-aaa_gke_aaa-min_version = " 1.21.5-gke.1302"
+aaa_gke_aaa-min_version = "1.21.5-gke.1302"
 aaa_gke_aaa-init = 1
 
 # GKE Pool

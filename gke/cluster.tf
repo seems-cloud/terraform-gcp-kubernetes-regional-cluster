@@ -17,9 +17,6 @@ resource "google_container_cluster" "aaa_gke_aaa" {
   }
 
   master_auth {
-    username = ""
-    password = ""
-
     client_certificate_config {
       issue_client_certificate = false
     }
@@ -74,7 +71,7 @@ resource "google_container_cluster" "aaa_gke_aaa" {
   }
 
   workload_identity_config {
-    identity_namespace = "${var.project_id}.svc.id.goog"
+    workload_pool  = "${var.project_id}.svc.id.goog"
   }
 
   depends_on = [

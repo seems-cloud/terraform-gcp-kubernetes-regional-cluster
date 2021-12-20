@@ -1,22 +1,4 @@
-# Terraform GCP Kubernetes Regional Cluster
-
-## Get credentials
-
-### Install `gcloud`
-```bash
-https://cloud.google.com/sdk/docs/install
-```
-
-### Login and config project
-```bash
-gcloud auth login
-
-gcloud projects list
-gcloud config set project project_id
-
-gcloud container clusters list
-gcloud container clusters get-credentials --region=us-central1 example
-``` 
+# Terraform GCP Kubernetes Regional Cluster 
 
 ## Affinity
 

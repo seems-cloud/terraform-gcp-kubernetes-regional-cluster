@@ -22,25 +22,6 @@ resource "google_container_cluster" "aaa_gke_aaa" {
     }
   }
 
-  node_config {
-    preemptible = var.aaa_gke_aaa-preemptible
-
-    machine_type = var.aaa_gke_aaa-type
-    disk_type = "pd-ssd"
-    disk_size_gb = 50
-
-    tags = var.aaa_gke_aaa-tags
-
-    service_account = google_service_account.aaa_gke_aaa.email
-
-    oauth_scopes = [
-      "https://www.googleapis.com/auth/logging.write",
-      "https://www.googleapis.com/auth/monitoring",
-      "https://www.googleapis.com/auth/ndev.clouddns.readwrite",
-      "https://www.googleapis.com/auth/cloud-platform"
-    ]
-  }
-
   addons_config {
     http_load_balancing {
       disabled = false

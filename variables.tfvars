@@ -1,6 +1,6 @@
 # Configuration
-project_id = "molten-infusion-277321"
-region = "us-central1"
+project_id = "core-337701"
+region = "europe-central2"
 prefix = "a" # must be [a-z]
 
 # Keys
@@ -18,15 +18,14 @@ aaa_gke_aaa-name = "example"
 aaa_gke_aaa-tags = [
   "gke",
   "all"]
-aaa_gke_aaa-region = "us-central1"
+aaa_gke_aaa-region = "europe-central2"
 aaa_gke_aaa-zones = [
-  "us-central1-a",
-  "us-central1-b",
-  "us-central1-c",
-  "us-central1-f"
+  "europe-central2-a",
+  "europe-central2-b",
+  "europe-central2-c",
 ]
 aaa_gke_aaa-cidr = "10.0.10.0/24"
-aaa_gke_aaa-type = "e2-highcpu-2"
+aaa_gke_aaa-type = "e2-standard-8"
 aaa_gke_aaa-min_version = "1.21.5-gke.1302"
 aaa_gke_aaa-init = 1
 
@@ -36,15 +35,14 @@ aaa_gke_pool_aaa-name = "mini-pool"
 aaa_gke_pool_aaa-tags = [
   "gke",
   "all"]
-aaa_gke_pool_aaa-region = "us-central1"
+aaa_gke_pool_aaa-region = "europe-central2"
 aaa_gke_pool_aaa-zones = [
-  "us-central1-a",
-  "us-central1-b",
-  "us-central1-c",
-  "us-central1-f"
+  "europe-central2-a",
+  "europe-central2-b",
+  "europe-central2-c",
 ]
 aaa_gke_pool_aaa-cidr = "10.0.11.0/24"
-aaa_gke_pool_aaa-type = "e2-highcpu-2"
-aaa_gke_pool_aaa-init = 1
-aaa_gke_pool_aaa-min = 1
-aaa_gke_pool_aaa-max = 1
+aaa_gke_pool_aaa-type = "e2-standard-8"
+aaa_gke_pool_aaa-init = 3
+aaa_gke_pool_aaa-min = 3
+aaa_gke_pool_aaa-max = 3

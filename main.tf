@@ -1,6 +1,6 @@
 provider "google" {
   credentials = ".credentials.json"
-  project = "molten-infusion-277321"
+  project = "core-337701"
   region = var.region
 }
 

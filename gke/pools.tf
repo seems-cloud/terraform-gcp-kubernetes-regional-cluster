@@ -17,7 +17,7 @@ resource "google_container_node_pool" "aaa_pool_aaa" {
     preemptible = var.aaa_gke_pool_aaa-preemptible
     machine_type = var.aaa_gke_pool_aaa-type
     disk_type = "pd-ssd"
-    disk_size_gb = 50
+    disk_size_gb = 40
 
     tags = var.aaa_gke_pool_aaa-tags
 
